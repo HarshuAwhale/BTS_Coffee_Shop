@@ -62,6 +62,7 @@ $con->close();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BTS coffee shop</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cookies.css">
 </head>
 
 <body>
@@ -83,12 +84,7 @@ $con->close();
               <li><a href="#contact">Contact Us</a></li>
               <li><a href="signup.php" id="signup-btn" class="btn">Sign Up</a></li>
 
-              <!-- <div class="icons">
-                <i class="fas fa-search" id="search-btn"></i>
-                <a href="signup.php"><i class="fas fa-user" id="signup-btn" class="active"></i></a>
-                <i class="fa-solid fa-xmark" id="form-close" class="active"></i>
-              </div> -->
-
+      
               
 
               
@@ -111,25 +107,12 @@ $con->close();
           </div>
         </div>
       </header>
-      <!-- <marquee behavior="" direction="">Power up with ❤️coffee⚡!!</marquee> -->
+      
       <!-- home section starts -->
       <section class="home" id="section">
         <!-- <div class="showcase-area"> -->
        
-            <!-- <div class="left">
-              <div class="big-title">
-                <h1>Taste the freshness!</h1>
-                <h1>Made with Love💜</h1>
-              </div>
-              <p class="text">
-                PTD café is an establishment that primarily serves coffee of various types, e.g. espresso, latte, and
-                cappuccino . <br>By day this cafe is the colour of supermarket oranges, it has that shiny look with the
-                music of famous kpop group BTS💜.
-              </p>
-              <div class="cta">
-                <a href="#" class="btn">Get started</a>
-              </div>
-            </div> -->
+           
             <div class="content">
               <h3>Agust D Cafe</h3>
               <p>Taste the freshness!!</p>
@@ -151,22 +134,24 @@ $con->close();
           </div>
 
 
-            <!-- <div class="right">
-              <img src="./img/bts-removebg-preview.png" alt="Person Image" class="person" />
-            </div> -->
-          <!-- </div> -->
-       
-<!-- 
-        <div class="bottom-area">
-          <div class="container">
-            <button class="toggle-btn">
-              <i class="far fa-moon"></i>
-              <i class="far fa-sun"></i>
-            </button>
-          </div>
-        </div> -->
+            
       </section>
 
+    <!-- Cookie creation starts -->
+    <div class="wrapper">
+        <!-- <i class="fa-solid fa-cookie"></i> -->
+        <div class="content">
+            <h1>Cookies Consent</h1>
+            <p>This website use cookies to ensure you get the best experience on our website</p>
+            <div class="buttons">
+                <button class="item">Accept Cookie</button>
+                <a href="#" class="item">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Cookie creation ends -->
       <!-- services section starts -->
       <section class="espresso" id="services">
         <div class="max-width">
@@ -375,6 +360,8 @@ $con->close();
   </main>
 
   <!-- JavaScript Files -->
+
+  <script src="cookies.js"></script>
 
   <script src="https://kit.fontawesome.com/a81368914c.js"></script>
   <!-- <script src="app.js"></script> -->

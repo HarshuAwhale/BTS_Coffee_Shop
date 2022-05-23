@@ -38,6 +38,7 @@ else{
     echo"ERROR:$sql <br> $con->error";
 
 }
+header("Location:index.php");
 //close the database connection
 $con->close();
 
@@ -66,12 +67,13 @@ $con->close();
 <div class="signup-form-container">
               <i class="fa-solid fa-xmark" id="form-close" class="active"></i>
         
-          <form action="">
+          <form action="signup.php" method="post">
             <h3>SignUp!</h3>
             <input type="Name" name="name" class="box" placeholder="Enter your name:">
             <input type="Email" name="email" class="box" placeholder="Enter your email:">
             <input type="password" name="password" class="box" placeholder="Enter Password:">
-            <input type="submit" name="submit" class="btn-1" placeholder="Signup Now">
+            <button class="btn-1" onclick="alert('signed up successfully.')">Signup Now</button>
+            <!-- <input type="submit" name="submit" class="btn-1" placeholder="Signup Now"> -->
             
             <!-- <input type="submit" class="btn-1" name="signup now"> -->
             <input type="checkbox" id="remember">

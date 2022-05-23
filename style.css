@@ -728,6 +728,7 @@ color: var(--darkTwo);
 
 /* order section start here */
 .order-form-container{
+  max-width: 5000px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -17,15 +17,15 @@ if(!$con){
 
 //collect post variables
 
-$SrNo=$_POST['Sr No'];                                  //(for multicursor: alt+shift+drag+endkey(f12))
+                                //(for multicursor: alt+shift+drag+endkey(f12))
 $name=$_POST['name'];                                  //(for multicursor: alt+shift+drag+endkey(f12))
-$phoneno=$_POST['phone no'];
+$phone_no=$_POST['phone_no'];
 $address=$_POST['address'];
 $coffee=$_POST['coffee'];
 $quantity=$_POST['quantity'];
 $sql = "
-INSERT INTO `cafe`.`order`(`Sr No`, `name`, `phone no`, `address`, `coffee`, `quantity`) 
-VALUES ('$Sr No','$name','$phone no','address','coffee','quantity');";
+INSERT INTO `cafe`.`order`(`name`, `phone_no`, `address`, `coffee`, `quantity`) 
+VALUES ('$name','$phone_no','$address','$coffee','$quantity');";
 //echo $sql;
 
 
@@ -40,6 +40,7 @@ else{
     echo"ERROR:$sql <br> $con->error";
 
 }
+header("Location:index.php");
 //close the database connection
 $con->close();
 
@@ -66,11 +67,11 @@ $con->close();
 <div class="order-form-container">
               <!-- <i class="fa-solid fa-xmark" id="form-close" class="active"></i> -->
         
-          <form action="">
+          <form action="order.php" method="post">
             <h3>Order details!😇❤️</h3>
-            <input type="text "name="Name" class="box" placeholder="Enter your name:">
-            <input type="contact" name="Phone No" class="box" placeholder="Enter your Phone no:">
-            <input type="text" name="Address" class="box" placeholder="Enter your Address:">
+            <input type="text "name="name" class="box" placeholder="Enter your name:">
+            <input type="contact" name="phone_no" class="box" placeholder="Enter your Phone no:">
+            <input type="text" name="address" class="box" placeholder="Enter your Address:">
             <!-- <input type="password" class="box" placeholder="Enter Password:"> -->
             
             <select name="coffee" id="coffee" size="1" class="bts1">
@@ -100,7 +101,8 @@ $con->close();
               <option value="10">10</option>
             </select>
             <br><br>
-            <input type="submit" name="submit" value="Confirm order" class="btn-2">
+            <button class="btn-2" onclick="alert('Order Booked successfully.')">Confirm Order</button>
+            <!-- <input type="submit" name="submit" value="Confirm order" class="btn-2"> -->
             
             
             <!-- <input type="submit" class="btn-1" name="signup now"> -->
